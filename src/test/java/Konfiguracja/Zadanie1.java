@@ -14,7 +14,7 @@ public class Zadanie1 {
         WebDriver driver = new ChromeDriver();
 
         driver.manage().window().maximize();
-        driver.manage() .timeouts() .implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // implicit wait - czeka 10 sekund na pojawienie się elementów na stronie
         driver.get("https://www.google.com/");
 
         WebElement acceptCookiesButton = driver.findElement(By.id("L2AGLb"));
@@ -24,8 +24,8 @@ public class Zadanie1 {
         searchBar.clear();
         searchBar.sendKeys("swordartonline.wbijam");
         searchBar.submit();
-        WebElement link = driver.findElement(By.className("LC20lb"));
-        link.click();
+        WebElement link = driver.findElement(By.className("LC20lb")); // additional element
+        link.click(); // additional click
         driver.quit();
     }
 }
