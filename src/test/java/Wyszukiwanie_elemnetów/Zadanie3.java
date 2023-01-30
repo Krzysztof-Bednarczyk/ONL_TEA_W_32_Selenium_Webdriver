@@ -21,22 +21,10 @@ public class Zadanie3 {
         WebElement signInLink = driver.findElement(By.className("user_login"));
         signInLink.click();
         WebElement emailInput = driver.findElement(By.className("account_input"));
-        emailInput.sendKeys("random@test.com");
+        emailInput.sendKeys("random11@test.com");
         WebElement createAccountButton = driver.findElement(By.id("SubmitCreate"));
         createAccountButton.submit();
 
-        WebElement firstNameInput = driver.findElement(By.xpath("//input[@id='customer_firstname']"));
-        WebElement lastNameInput = driver.findElement(By.xpath("//input[@id='customer_lastname']"));
-        WebElement email = driver.findElement(By.xpath("//input[@id=\"email\"]"));
-        WebElement passwordInput = driver.findElement(By.xpath("//input[@id=\"passwd\"]"));
-        WebElement registerButton = driver.findElement(By.xpath("//button[@id=\"submitAccount\"]"));
 
-        firstNameInput.sendKeys("John");
-        lastNameInput.sendKeys("Lennon");
-        email.clear();
-        email.sendKeys("jlen@test.com"); // trzeba stworzyć metodę która będzie tworzyć nowego maila z każdym uruchomieniem
-        passwordInput.sendKeys("mypassword");
-        registerButton.click();
-        driver.quit();
     }
 }
